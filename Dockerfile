@@ -11,5 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN mkdir images
 
 COPY usps.py nomail.gif requirements.txt ./
+RUN mv nomail.gif ./images/nomail.gif
 
 CMD [ "python", "./usps.py" ]
