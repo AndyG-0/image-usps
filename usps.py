@@ -224,7 +224,7 @@ try:
             print_message ("Connected to MQTT Server successfully")
         except Exception as ex:
             print_message ("Error connecting to MQTT.")
-            print_message (str(ex))
+            print_message (str(ex) + "MQTT_SERVER: " + MQTT_SERVER + ", MQTT_SERVER_PORT: " + MQTT_SERVER_PORT)
             sys.exit(1)    
 
         try:
