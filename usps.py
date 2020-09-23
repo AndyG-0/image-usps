@@ -14,90 +14,90 @@ import paho.mqtt.client as mosquitto
 from shutil import copyfile
 
 # MQTT Server Address and Port
-if os.getenv['MQTT_SERVER'] is None:
+if os.getenv('MQTT_SERVER') is None:
     MQTT_SERVER = "usps"
 else:
-    MQTT_SERVER = os.getenv['MQTT']
+    MQTT_SERVER = os.getenv('MQTT')
 
-if os.getenv['MQTT_SERVER_PORT'] is None:
+if os.getenv('MQTT_SERVER_PORT') is None:
     MQTT_SERVER_PORT = "1883"
 else:
-    MQTT_SERVER_PORT = os.getenv['MQTT_SERVER_PORT']
+    MQTT_SERVER_PORT = os.getenv('MQTT_SERVER_PORT')
 
 # MQTT User name and Password
-if os.getenv['MQTT_USERNAME'] is None:
+if os.getenv('MQTT_USERNAME') is None:
     MQTT_USERNAME = ""
 else:
-    MQTT_USERNAME = os.getenv['MQTT_USERNAME']
+    MQTT_USERNAME = os.getenv('MQTT_USERNAME')
 
-if os.getenv['MQTT_PASSWORD'] is None:
+if os.getenv('MQTT_PASSWORD') is None:
     MQTT_PASSWORD = ""
 else:
-    MQTT_PASSWORD = os.getenv['MQTT_PASSWORD']
+    MQTT_PASSWORD = os.getenv('MQTT_PASSWORD')
 
-if os.getenv['MQTT_USPS_MAIL_TOPIC'] is None:
+if os.getenv('MQTT_USPS_MAIL_TOPIC') is None:
     MQTT_USPS_MAIL_TOPIC = "/usps/mails"
 else:
-    MQTT_USPS_MAIL_TOPIC = os.getenv['MQTT_USPS_MAIL_TOPIC']
+    MQTT_USPS_MAIL_TOPIC = os.getenv('MQTT_USPS_MAIL_TOPIC')
 
-if os.getenv['MQTT_USPS_PACKAGE_TOPIC'] is None:
+if os.getenv('MQTT_USPS_PACKAGE_TOPIC') is None:
     MQTT_USPS_PACKAGE_TOPIC = "/usps/packages"
 else:
-    MQTT_USPS_PACKAGE_TOPIC = os.getenv['MQTT_USPS_PACKAGE_TOPIC']
+    MQTT_USPS_PACKAGE_TOPIC = os.getenv('MQTT_USPS_PACKAGE_TOPIC')
 
-if os.getenv['SLEEP_TIME_IN_SECONDS'] is None:
+if os.getenv('SLEEP_TIME_IN_SECONDS') is None:
     SLEEP_TIME_IN_SECONDS = 300
 else:
-    SLEEP_TIME_IN_SECONDS = os.getenv['SLEEP_TIME_IN_SECONDS']
+    SLEEP_TIME_IN_SECONDS = os.getenv('SLEEP_TIME_IN_SECONDS')
 
-if os.getenv['HOST'] is None:
+if os.getenv('HOST') is None:
     HOST = 'imap.gmail.com'
 else:
-    HOST = os.getenv['HOST']
+    HOST = os.getenv('HOST')
 
-if os.getenv['PORT'] is None:
+if os.getenv('PORT') is None:
     PORT = 993
 else:
-    PORT = os.getenv['PORT']
+    PORT = os.getenv('PORT')
 
-if os.getenv['USERNAME'] is None:   
+if os.getenv('USERNAME') is None:   
     print_message ("Environment variable USERNAME not Populated")
     sys.exit(1)
 else:
-    USERNAME = os.getenv['USERNAME']
+    USERNAME = os.getenv('USERNAME')
 
-if os.getenv['PASSWORD'] is None:   
+if os.getenv('PASSWORD') is None:   
     print_message ("Environment variable PASSWORD not Populated")
     sys.exit(1)
 else: 
-    PASSWORD = os.getenv['PASSWORD']
+    PASSWORD = os.getenv('PASSWORD')
 
-if os.getenv['MAIL_FOLDER'] is None:   
+if os.getenv('MAIL_FOLDER') is None:   
     folder = 'inbox'
 else:
-    folder = os.getenv['MAIL_FOLDER']
+    folder = os.getenv('MAIL_FOLDER')
 
-if os.getenv['GIF_FILE_NAME'] is None: 
+if os.getenv('GIF_FILE_NAME') is None: 
     GIF_FILE_NAME = "todays_mails.gif"
 else:
-    GIF_FILE_NAME = os.getenv['GIF_FILE_NAME']
+    GIF_FILE_NAME = os.getenv('GIF_FILE_NAME')
 
-if os.getenv['GIF_MAKER_OPTIONS'] is None: 
+if os.getenv('GIF_MAKER_OPTIONS') is None: 
     GIF_MAKER_OPTIONS = '/usr/bin/convert  -delay 300 -loop 0 '
 else: 
-     GIF_MAKER_OPTIONS = os.getenv['GIF_MAKER_OPTIONS']
+     GIF_MAKER_OPTIONS = os.getenv('GIF_MAKER_OPTIONS')
 
-if os.getenv['IMAGE_OUTPUT_PATH'] is None: 
+if os.getenv('IMAGE_OUTPUT_PATH') is None: 
     print_message ("Environment variable IMAGE_OUTPUT_PATH not Populated")
     sys.exit(1)
 else:
-    IMAGE_OUTPUT_PATH = os.getenv['IMAGE_OUTPUT_PATH']
+    IMAGE_OUTPUT_PATH = os.getenv('IMAGE_OUTPUT_PATH')
 
-print_message ("MQTT_SERVER")
-print_message (MQTT_SERVER)
+print("MQTT_SERVER")
+print(MQTT_SERVER)
 
-print_message ("MQTT_SERVER_PORT")
-print_message (MQTT_SERVER_PORT)
+print("MQTT_SERVER_PORT")
+print(MQTT_SERVER_PORT)
 
 # Login Method
 ###############################################################################
