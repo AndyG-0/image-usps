@@ -8,6 +8,8 @@ RUN apt install imagemagick
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+RUN mkdir images
+
+COPY usps.py nomail.gif requirements.txt .
 
 CMD [ "python", "./usps.py" ]
