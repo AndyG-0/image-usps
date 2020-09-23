@@ -17,7 +17,7 @@ from shutil import copyfile
 if os.getenv('MQTT_SERVER') is None:
     MQTT_SERVER = "usps"
 else:
-    MQTT_SERVER = os.getenv('MQTT')
+    MQTT_SERVER = os.getenv('MQTT_SERVER')
 
 if os.getenv('MQTT_SERVER_PORT') is None:
     MQTT_SERVER_PORT = "1883"
