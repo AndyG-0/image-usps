@@ -20,7 +20,7 @@ else:
     MQTT_SERVER = os.getenv('MQTT_SERVER')
 
 if os.getenv('MQTT_SERVER_PORT') is None:
-    MQTT_SERVER_PORT = "1883"
+    MQTT_SERVER_PORT = 1883
 else:
     MQTT_SERVER_PORT = os.getenv('MQTT_SERVER_PORT')
 
@@ -92,12 +92,6 @@ if os.getenv('IMAGE_OUTPUT_PATH') is None:
     sys.exit(1)
 else:
     IMAGE_OUTPUT_PATH = os.getenv('IMAGE_OUTPUT_PATH')
-
-print("MQTT_SERVER")
-print(MQTT_SERVER)
-
-print("MQTT_SERVER_PORT")
-print(MQTT_SERVER_PORT)
 
 # Login Method
 ###############################################################################
